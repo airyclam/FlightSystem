@@ -1,0 +1,53 @@
+User Guide:
+Launch and select menu option by entering corresponding number. 
+
+0. Create a new passenger
+Creates a new client. Default set at 0 trips taken. 
+
+1. Edit information for an existing passenger
+Allows you to edit client info. Select user to change by entering passengerID.
+
+2. Display all passenger information based on name
+Displays all passenger information in alphabetical order.
+
+3. Display all passenger information based on number of segments flown
+Displays all passenger information based on trips taken.
+
+4. Book a reservation
+Book a reservation for a flight. If flight has more than 5 reservations the client is put on a waitlist.
+
+5. Cancel a reservation
+Cancels a reservation for a flight.
+
+6. Display all flights with flight details
+Displays all flights along with current amount of reservations. Enter a flight number for detailed passenger and waitlist information.
+
+
+Flights paths are written in flights.txt
+
+@author lameric 05/16/2020
+
+
+
+Project criteria:
+
+Your code must utilize at least two different data structures (ex. one to store the passengers of a flight and one to store all the different flights). You will probably need more than just two data structures though. Here's a general overview of the types of structures we covered:
+List
+Stack
+Queue
+Priority Queue
+Tree
+Map
+Your code must utilize sorting of at least one type (ex. to print out all of the passengers based on number of segments flown)
+Your code must have a text-based user interface (ex. printing a menu, getting user input, completing that action, repeat)
+
+
+Questions:
+How you met the criteria for this project. For example, why did you choose the data structures you chose? (1-2 paragraphs)
+
+I chose to put passengers and flights into maps so that I could call them based on their passenger and flight numbers. If there are many flights/passengers it will be hard to find the correct flight/passenger from a long list and selecting the correct number, so using a code is more efficient with more data. I also put the passengers into an arrayList so that I can sort them based off of their object data like trips taken and name, which I cannot do with a map. 
+
+
+Brief discussion regarding what was most challenging about your project and how you overcame those challenges. (1-2 paragraphs)
+
+The most challenging part for me was figuring out how to structure the waitlist. I knew there had to at least be one big priority queue with all the names so that removing one name would move the others up, but I wasn't sure exactly how to separate the top 5 as the passengers and the rest as the waitlist. In the end, I just made a loop in the main class which probably isn't the prettiest solution but it works. It would probably look cleaner if I made it a method in the flight class, but I'm not sure.
